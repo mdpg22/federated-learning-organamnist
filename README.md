@@ -15,10 +15,13 @@ OrganAMNIST (MedMNIST) — 28x28 grayscale images of abdominal CT scans, 11 orga
 Improved CNN with 3 convolutional blocks, Batch Normalization and Dropout.
 
 ## Setup
+```bash
 pip install flwr medmnist
 pip install -e .
+```
 
 ## Run
+```bash
 # Default (IID, 10 nodes, 5 rounds)
 flwr run .
 
@@ -27,6 +30,7 @@ flwr run . local-10 --run-config "partitioner-type='dirichlet' alpha=0.1"
 
 # All experiments
 bash run_experiments.sh
+```
 
 ## Experiments
 - IID partitioning with 10, 20 and 50 nodes
@@ -34,4 +38,4 @@ bash run_experiments.sh
 - Pathological partitioner (2 and 5 classes per node)
 
 ## Results
-See report.pdf for the full analysis and plots.
+See `report.pdf` for the full analysis and plots.
